@@ -1,4 +1,4 @@
 def call(body){
-def log = sh(returnStdout: true, script: 'docker scan capstone:100')
+def log = sh(script: 'docker scan capstone:100')
   echo "${log}"
 }
