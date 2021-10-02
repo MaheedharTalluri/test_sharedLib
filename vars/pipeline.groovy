@@ -1,3 +1,4 @@
-def call(String var){
-  var = script(sh "docker scan ${var}")
+def call(body){
+def log = sh(returnStdout: true, script: 'docker scan capstone:100')
+  echo "${log}"
 }
